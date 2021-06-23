@@ -6,11 +6,9 @@ import { fixRoundingErrors, calculateAspectRatio } from "./aspect-ratio.mjs";
 const moduloOne = document.getElementById("modulo_1");
 const moduloTwo = document.getElementById("modulo_2");
 const moduloResult = document.getElementById("modulo_result");
+const moduloForm = document.getElementById("modulo-form");
 
-moduloOne.addEventListener("input", () => {
-    moduloResult.value = modulo(moduloOne.value, moduloTwo.value);
-});
-moduloTwo.addEventListener("input", () => {
+moduloForm.addEventListener("change", () => {
     moduloResult.value = modulo(moduloOne.value, moduloTwo.value);
 });
 
@@ -18,11 +16,9 @@ moduloTwo.addEventListener("input", () => {
 const percentageOne = document.getElementById("percentage_1");
 const percentageTwo = document.getElementById("percentage_2");
 const percentageResult = document.getElementById("percentage_result");
+const percentageForm = document.getElementById("percentage-form");
 
-percentageOne.addEventListener("input", () => {
-    percentageResult.value = fixRoundingErrors(percentage(percentageOne.value, percentageTwo.value));
-});
-percentageTwo.addEventListener("input", () => {
+percentageForm.addEventListener("change", () => {
     percentageResult.value = fixRoundingErrors(percentage(percentageOne.value, percentageTwo.value));
 });
 
@@ -30,11 +26,9 @@ percentageTwo.addEventListener("input", () => {
 const percentageOfOne = document.getElementById("percentageOf_1");
 const percentageOfTwo = document.getElementById("percentageOf_2");
 const percentageOfResult = document.getElementById("percentageOf_result");
+const percentageOfForm = document.getElementById("percentageOf-form");
 
-percentageOfOne.addEventListener("input", () => {
-    percentageOfResult.value = fixRoundingErrors(percentageOf(percentageOfOne.value, percentageOfTwo.value));
-});
-percentageOfTwo.addEventListener("input", () => {
+percentageOfForm.addEventListener("change", () => {
     percentageOfResult.value = fixRoundingErrors(percentageOf(percentageOfOne.value, percentageOfTwo.value));
 });
 
@@ -42,11 +36,9 @@ percentageOfTwo.addEventListener("input", () => {
 const differenceOne = document.getElementById("difference_1");
 const differenceTwo = document.getElementById("difference_2");
 const differenceResult = document.getElementById("difference_result");
+const differenceForm = document.getElementById("difference-form");
 
-differenceOne.addEventListener("input", () => {
-    differenceResult.value = fixRoundingErrors(difference(differenceOne.value, differenceTwo.value));
-});
-differenceTwo.addEventListener("input", () => {
+differenceForm.addEventListener("change", () => {
     differenceResult.value = fixRoundingErrors(difference(differenceOne.value, differenceTwo.value));
 });
 
